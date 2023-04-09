@@ -1,0 +1,59 @@
+post http://localhost:3001/login/
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@123"
+}
+###
+get http://localhost:3001/states/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjgwMjQ1OTEwfQ.aoOT6q_-b07Bs_GsuKITxvCRp-3b7ayeCON_64-noEE
+###
+
+get http://localhost:3001/states/8/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjgwMjQ1OTEwfQ.aoOT6q_-b07Bs_GsuKITxvCRp-3b7ayeCON_64-noEE
+###
+
+get http://localhost:3001/states/8/
+###
+
+post http://localhost:3001/districts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjgwMjQ1OTEwfQ.aoOT6q_-b07Bs_GsuKITxvCRp-3b7ayeCON_64-noEE
+Content-Type: application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+###
+get http://localhost:3001/districts/200/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjgwMjQ1OTEwfQ.aoOT6q_-b07Bs_GsuKITxvCRp-3b7ayeCON_64-noEE
+###
+
+DELETE http://localhost:3001/districts/321/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjgwMjQ1OTEwfQ.aoOT6q_-b07Bs_GsuKITxvCRp-3b7ayeCON_64-noEE
+###
+
+put http://localhost:3001/districts/323/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjgwMjQ1OTEwfQ.aoOT6q_-b07Bs_GsuKITxvCRp-3b7ayeCON_64-noEE
+Content-Type: application/json
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+###
+
+get http://localhost:3001/states/3/stats/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNjgwMjQ1OTEwfQ.aoOT6q_-b07Bs_GsuKITxvCRp-3b7ayeCON_64-noEE
+###
+
+get http://localhost:3001/districts/2/details/
